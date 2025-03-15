@@ -2,6 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],
 <<<<<<< HEAD
+<<<<<<< HEAD
   "exclude": ["dist"]
 =======
   "exclude": ["dist"],
@@ -9,4 +10,7 @@
     "strictNullChecks": true
   }
 >>>>>>> 17a2bcf (Initial commit from Astro)
+=======
+  "exclude": ["dist"]
+>>>>>>> 1bcabb9 (first commit)
 }

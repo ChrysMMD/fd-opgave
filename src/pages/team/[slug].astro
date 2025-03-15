@@ -1,0 +1,46 @@
+---
+//Type-definition for en medarbejder med TypeScript-type, for ikke at få fejl.
+type Employee = {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  description_long: string;
+};
+
+//Funktion til at hente alle medarbejdere og oprette ruter
+export async function getStaticPaths() {
+  const employeesData: Employee[] = await fetch(
+    "https://frontend-design-theme.netlify.app/api/employees"
+  ).then((response) => response.json());
+
+  //jeg konvertere id til en string, da params altid skal være en string.
+  return employeesData.map((employee) => ({
+    params: { slug: String(employee.id) },
+  }));
+}
+
+//Hent slug fra URL'en
+const { slug } = Astro.params;
+
+//Hent medarbejderdata igen for at vise detaljer
+const employeesData: Employee[] = await fetch(
+  "https://frontend-design-theme.netlify.app/api/employees"
+).then((response) => response.json());
+
+//Find den rigtige medarbejder baseret på slug og konvertere slug tilbage til number igen.
+const employee = employeesData.find((e) => e.id === Number(slug));
+---
+
+{
+  employee ? (
+    <article>
+      <h1>{employee.name}</h1>
+      <h2>Position: {employee.title}</h2>
+      <h2>Description: {employee.description}</h2>
+      <p>Description-long: {employee.description_long}</p>
+    </article>
+  ) : (
+    <p>Medarbejderen blev ikke fundet.</p>
+  )
+}

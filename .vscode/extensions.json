@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
   "recommendations": ["astro-build.astro-vscode"],
-=======
-  "recommendations": ["astro-build.astro-vscode", "unifiedjs.vscode-mdx"],
->>>>>>> 17a2bcf (Initial commit from Astro)
   "unwantedRecommendations": []
 }
