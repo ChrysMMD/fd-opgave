@@ -3,37 +3,47 @@
 ---
 
 <nav class="navbar">
-  <div class="nav-container">
-    <a href="#" class="logo">AskExperts</a>
+  <a href="#" class="logo">AskExperts</a>
 
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Team</a></li>
-      <li><a href="#">Case Study</a></li>
-    </ul>
+  <ul class="nav-links">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Team</a></li>
+    <li><a href="#">Case Study</a></li>
+  </ul>
 
-    <a href="#" class="login">Login</a>
+  <a href="#" class="login">Login</a>
 
-    <button class="menu-toggle" aria-label="Toggle menu"> ☰ </button>
-  </div>
+  <button class="menu-toggle" aria-label="Toggle menu"> ☰ </button>
 </nav>
 
 <style>
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 112px;
+    width: 100%;
+  }
   .navbar {
-    background-color: var(--primary-color3);
+    background-color: var(--transparent-color);
     backdrop-filter: blur(10.5px);
     position: relative;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--secondary-color2);
+    padding: 2rem;
   }
 
   .nav-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
+
     position: relative;
-    padding: 2.3rem;
-    color: var(--secondary-color2);
   }
 
   .logo {

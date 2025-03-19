@@ -5,17 +5,39 @@
   --primary-color1: #ffcc4a;
   --secondary-color1: #f5f5f5;
   --secondary-color2: #fff;
+  --transparent-color: rgba(27, 27, 27, 0.91);
 
-  /* --- SIZES --- */
-  --base-size: 16;
-  /* font-size: calc(14 / var(--base-size) * 1rem);*/
+  /* --- SIZES FONTS --- */
+  --paragraph-fontsize: clamp(14px, 2vw, 18px);
+  --h4-fontsize: clamp(16px, 2.5vw, 22px);
+  --h3-fontsize: clamp(20px, 3vw, 28px);
+  --h2-fontsize: clamp(24px, 4vw, 36px);
+  --h1-fontsize: clamp(32px, 5vw, 56px);
+
+  /* --- KNAPLAYOUT --- */
+  --btn-font-size: var(--paragraph-fontsize);
+  --btn-padding: 16px 31px;
+  --btn-border-radius: 42px;
+  --btn-transition: 0.3s ease-in-out;
 }
 
 /* --- TYPOGRAFI --- */
+h1 {
+  color: var(--secondary-color2);
+  font-size: var(--h1-fontsize);
+  font-family: "Cabin", sans-serif;
+  margin: 0;
+}
+
+h2 {
+  color: var(--secondary-color1);
+  font-size: var(--h2-fontsize);
+  font-family: "Cabin", sans-serif;
+}
 
 .logo {
   font-family: "Cabin", sans-serif;
-  font-size: 30px;
+  font-size: var(--h2-fontsize);
   font-style: normal;
   font-weight: 600;
   line-height: 105%;
@@ -26,7 +48,7 @@
 .login {
   font-family: "Lato", sans-serif;
   color: var(--primary-color3);
-  font-size: 17px;
+  font-size: var(--paragraph-fontsize);
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -41,6 +63,85 @@
 
 p {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  font-size: var(--paragraph-fontsize);
   color: var(--secondary-color2);
+}
+
+/* --- BILLEDER ---*/
+img {
+  max-width: 100%;
+}
+
+/* --- LAYOUT --- */
+section {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+/* --- KNAPPER ---*/
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--btn-font-size);
+  padding: var(--btn-padding);
+  border-radius: var(--btn-border-radius);
+  text-align: center;
+  text-decoration: none;
+  transition: var(--btn-transition);
+  border: none;
+  cursor: pointer;
+}
+
+/* --- BANNER --- */
+.banner {
+  display: grid;
+  grid-column: 1/5;
+  background-color: var(--primary-color3);
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
+.pattern {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.pattern img {
+  width: 100%;
+}
+
+.text-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.ban-billede {
+  grid-column: 3/5;
+  grid-row: 1/4;
+  min-width: 0;
+}
+
+.ban-billede img {
+  height: 100%;
+  object-fit: cover;
+  min-width: 0;
+}
+
+/* --- BANNER CARDS --- */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: absolute;
+  top: 600px;
+  left: 0;
+  right: 0;
+  gap: 1rem;
 }

@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
 ---
 
 <html lang="en">
@@ -20,10 +21,59 @@ import Footer from "../components/Footer.astro";
       <Nav />
     </header>
 
-    <main>
-      <h1>Velkommen til forsiden!</h1>
-    </main>
+    <section>
+      <div class="banner">
+        <div class="pattern">
+          <img src="/pattern.png" alt="" />
+        </div>
+        <div class="text-container">
+          <div class="text">
+            <h1>Empowering Your Business Growth</h1>
+            <p>
+              Discover tailored strategies and expert insights to take your
+              business to the next level. Let us help you navigate challenges
+              and achieve sustainable success.
+            </p>
+          </div>
+          <button class="btn">Book a Meeting</button>
+        </div>
+        <div class="ban-billede">
+          <img src="/bannerportræt.png" alt="" />
+        </div>
+      </div>
+    </section>
 
+    <div class="cards-container">
+      <Card
+        title="Finance & Restructuring"
+        text="Unlock financial clarity and implement effective restructuring strategies to optimize your business operations."
+        btnText="Our Services"
+      />
+      <Card
+        title="Our Approach"
+        text="Explore our proven methods for achieving growth and building resilience through customized solutions."
+        btnText="More About"
+      />
+      <Card
+        title="Consultalk Result"
+        text="Experience actionable insights and measurable results through expert consultation and tailored guidance."
+        btnText="Explore Our Solution"
+      />
+    </div>
+
+    <section>
+      <div class="imgpattern"></div>
+      <div class="image"></div>
+      <div class="textbox">
+        <div class="note">We'll work with you</div>
+        <h3>What To Expect</h3>
+        <p>
+          Our collaboration is built on transparency, efficiency, and measurable
+          results. Together, we create strategies tailored to your unique needs
+          and goals.
+        </p>
+      </div>
+    </section>
     <footer>
       <Footer />
     </footer>

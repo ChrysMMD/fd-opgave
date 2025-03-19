@@ -1,13 +1,5 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
   "name": "fd-opgave-skabelon",
-=======
-  "name": "temaopgaveastro",
->>>>>>> 17a2bcf (Initial commit from Astro)
-=======
-  "name": "fd-opgave-skabelon",
->>>>>>> 1bcabb9 (first commit)
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -17,17 +9,6 @@
     "astro": "astro"
   },
   "dependencies": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "astro": "^5.3.0"
-=======
-    "@astrojs/mdx": "^4.2.0",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.5.1"
->>>>>>> 17a2bcf (Initial commit from Astro)
-=======
-    "astro": "^5.3.0"
->>>>>>> 1bcabb9 (first commit)
   }
 }
