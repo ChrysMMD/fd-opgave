@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
+import Knap from "../components/Knap.astro";
 ---
 
 <html lang="en">
@@ -21,7 +22,7 @@ import Card from "../components/Card.astro";
       <Nav />
     </header>
 
-    <section>
+    <section class="banner-wrapper">
       <div class="banner">
         <div class="pattern">
           <img src="/pattern.png" alt="" />
@@ -35,7 +36,7 @@ import Card from "../components/Card.astro";
               and achieve sustainable success.
             </p>
           </div>
-          <button class="btn">Book a Meeting</button>
+          <Knap variant="btn default-white" btnText="Book A Meeting" />
         </div>
         <div class="ban-billede">
           <img src="/bannerportræt.png" alt="" />
@@ -61,11 +62,12 @@ import Card from "../components/Card.astro";
       />
     </div>
 
-    <section>
-      <div class="imgpattern"></div>
-      <div class="image"></div>
+    <section data-surface="white">
+      <div class="image">
+        <img src="../../public/indeximg2.png" alt="Møde" />
+      </div>
       <div class="textbox">
-        <div class="note">We'll work with you</div>
+        <div class="note"><h4>We'll work with you</h4></div>
         <h3>What To Expect</h3>
         <p>
           Our collaboration is built on transparency, efficiency, and measurable

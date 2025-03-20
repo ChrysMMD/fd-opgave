@@ -1,0 +1,30 @@
+---
+import "../styles/global.css";
+import "../styles/reset.css";
+const { overskrift, tekst } = Astro.props;
+---
+
+<div class="numre_indi">
+  <h2>{overskrift}</h2>
+  <p>{tekst}</p>
+</div>
+
+<style>
+  .numre_indi h2 {
+    color: #181818;
+    font-family: Cabin;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 116%; /* 3.625rem */
+  }
+
+  .numre_indi p {
+    color: #181818;
+    font-family: Cabin;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 116%; /* 1.305rem */
+  }
+</style>

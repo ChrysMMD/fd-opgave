@@ -1,20 +1,46 @@
-<style>
-  :root {
-    --btn-font-size: var(--paragraph-fontsize);
-    --btn-padding: 16px 31px;
-    --btn-border-radius: 20%;
-    --btn-transition: 0.3s ease-in-out;
-  }
+---
+import "../styles/global.css";
+const { btnText, link, variant, target, navn } = Astro.props;
+---
 
+<button class={variant}>{btnText}</button>
+
+<style>
   .btn {
-    display: inline-block;
-    font-size: var(--btn-font-size);
-    padding: var(--btn-padding);
     border-radius: var(--btn-border-radius);
+    padding: var(--btn-padding);
+    align-items: center;
+    font-size: var(--btn-font-size);
+    transition: var(--btn-transition);
+    display: inline-flex;
+    justify-content: center;
     text-align: center;
     text-decoration: none;
-    transition: var(--btn-transition);
     border: none;
     cursor: pointer;
+  }
+  .default-black {
+    background-color: var(--primary-color3);
+    color: var(--secondary-color1);
+  }
+
+  .default-white {
+    background-color: var(--secondary-color2);
+    color: var(--primary-color3);
+  }
+
+  .default-black:hover {
+    background-color: var(--secondary-color1);
+    color: var(--primary-color3);
+  }
+
+  .default-yellow {
+    background-color: var(--primary-color1);
+    color: var(--primary-color3);
+  }
+
+  .default-yellow:hover {
+    background-color: var(--primary-color3);
+    color: var(--secondary-color1);
   }
 </style>

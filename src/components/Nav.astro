@@ -1,5 +1,5 @@
 ---
-//
+import Knap from "../components/Knap.astro";
 ---
 
 <nav class="navbar">
@@ -7,24 +7,15 @@
 
   <ul class="nav-links">
     <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="/src/pages/about.astro">About</a></li>
     <li><a href="#">Team</a></li>
     <li><a href="#">Case Study</a></li>
   </ul>
 
-  <a href="#" class="login">Login</a>
-
-  <button class="menu-toggle" aria-label="Toggle menu"> ☰ </button>
+  <Knap variant="btn default-yellow" btnText="Login" />
 </nav>
 
 <style>
-  header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-height: 112px;
-    width: 100%;
-  }
   .navbar {
     background-color: var(--transparent-color);
     backdrop-filter: blur(10.5px);
